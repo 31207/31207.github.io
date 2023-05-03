@@ -221,11 +221,13 @@
     const gitalk = new Gitalk({
         clientID: "",
         clientSecret: "",
-        repo: "31207.github.io",
+        repo: "comment",
         owner: "31207",
         admin: "31207".split(","),
         language: "zh-CN",
         id: location.pathname,
+        
+        proxy: "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token",
         
     })
     gitalk.render("gitalk-container");
